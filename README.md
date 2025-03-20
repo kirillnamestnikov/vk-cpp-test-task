@@ -1,1 +1,3 @@
-Vk Cpp Test Task
+##### VK CPP TEST TASK
+
+### Выполнил Наместников Кирилл Алексеевич
