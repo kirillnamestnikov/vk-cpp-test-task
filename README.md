@@ -1,0 +1,1 @@
+Vk Cpp Test Task
