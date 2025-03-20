@@ -4,6 +4,6 @@
 
 ### Quick start:
 
-- Clone the repository
-- Compile the project
-- Run .out file with argument (filename)
+- Clone the repository ```git clone git@github.com:kirillnamestnikov/vk-cpp-test-task.git```
+- Compile the project ```g++ *.cpp```
+- Run .out file with argument (filename) ```./a.out [filename]```
