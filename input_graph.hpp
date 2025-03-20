@@ -7,7 +7,7 @@
 
 namespace src
 {
-  std::vector< std::vector< int > > inputGraph(std::istream & in, size_t graphVertices, size_t graphEdges);
+  std::vector< std::vector< int > > inputGraph(std::istream & in, int & currentVertex);
 }
 
 #endif

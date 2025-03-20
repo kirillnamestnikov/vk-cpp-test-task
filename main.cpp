@@ -6,15 +6,27 @@
 #include "get_distances.hpp"
 #include "input_graph.hpp"
 
-int main()
+int main(int argc, char * argv[])
 {
   using namespace src;
-  std::ifstream input("graph.txt");
-  size_t graphVertices = 0, graphEdges = 0;
-  input >> graphVertices >> graphEdges;
-  std::vector< std::vector< int > > graph = inputGraph(input, graphVertices, graphEdges);
+  std::vector< std::vector< int > > graph;
   int currentVertex = 0;
-  input >> currentVertex;
+  if (argc == 2)
+  {
+    std::ifstream input(argv[1]);
+    if (!input.is_open())
+    {
+      std::cerr << "Can not open the file\n";
+      return 1;
+    }
+    graph = inputGraph(input, currentVertex);
+    input.close();
+  }
+  else
+  {
+    std::cerr << "Wrong command line arguments\n";
+    return 2;
+  }
   std::vector< int > res = getDistances(graph, currentVertex);
   for (const auto & el: res)
   {
